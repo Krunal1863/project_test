@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Land Price Prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <!-- Correctly link the CSS file -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+</head>
+<!-- Area (sq. ft)	Price (INR)	Price per sq. ft (INR)	Road Width (m)	Distance to Nearest City (km)	Distance to Highway (km) -->
+<body>
+  <div class="login">
+    <h1>Predict Land Price</h1>
+    <form action="{{ url_for('predict') }}" method="post">
+      <input type="text" name="Area (sq. ft)" placeholder="Area (sq. ft)" required="required" />
+      <input type="text" name="Price per sq. ft (INR)" placeholder="Price per sq. ft (INR)" required="required" />
+      <input type="text" name="Road Width (m)" placeholder="Road Width (m)" required="required" />
+      <input type="text" name="Distance to Nearest City (km)" placeholder="Distance to Nearest City (km)" required="required" />
+      <input type="text" name="Distance to Highway (km)" placeholder="Distance to Highway (km)" required="required" />
+      <!-- <input type="text" name="Area of the house(excluding basement)" placeholder="Area of the house(excluding basement)" required="required" /> -->
+      <!-- <input type="text" name="Number of schools nearby" placeholder="Number of schools nearby" required="required" /> -->
+      <!-- <input type="text" name="Distance from the airport" placeholder="Distance from the airport" required="required" /> -->
+      <input type="text" name="City" placeholder="City" required="required" />
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+    <br>
+    <br>
+    <h1 id="predi">
+      {{ prediction_text }}
+    </h1>
+
+
+     <!-- Back Button -->
+     <button onclick="redirectToMain()">Back</button>
+
+     <script>
+         function redirectToMain() {
+             window.location.href = "http://127.0.0.1:5500/project3/templates/main.html";
+         }
+     </script>
+  </div>
+</body>
+
+</html>
