@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify, render_template
 import pickle
 
 # Create flask app
-flask_app = Flask(__name__, static_folder='static')
+flask_app1 = Flask(__name__, static_folder='static')
 
 # Load the model and scaler
 # Load the scaler and model
@@ -19,11 +19,11 @@ city_mapping = {
     "Ahmedabad": 5
 }
 
-@flask_app.route("/")
+@flask_app1.route("/")
 def home():
     return render_template("index1.html")
 
-@flask_app.route("/predict", methods=["POST"])
+@flask_app1.route("/predict", methods=["POST"])
 def predict():
     try:
         # Extract form values
@@ -60,4 +60,4 @@ def predict():
         return render_template("index1.html", prediction_text="Error: {}".format(str(e)))
 
 if __name__ == "__main__":
-    flask_app.run(debug=True)
+    flask_app1.run(debug=True,port=5001)
