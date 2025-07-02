@@ -1,0 +1,29 @@
+in this project folder i will try to  make one project on 
+    e - seva
+        - basically this project is about e book 
+            - in that i will provide study books , other novels and important books and many more 
+
+
+- front end 
+    in the front end i will use ________________
+    - two part user and admin 
+
+    * User 
+    - user need to first sighn up and if already than login 
+    - user can search or read book 
+    - user can buy e book 
+    - user can filter book as per their interest 
+
+    * Admin 
+    - admin can show user list 
+    - admin can shoe which book user liked most and which book is popular
+    - admin can add and delet book 
+    - handle transaction 
+
+- back end
+
+    - i dont idea so can you help me  
+
+- data base 
+
+    - same  i dont idea about this we will discus later 
